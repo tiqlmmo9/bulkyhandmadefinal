@@ -1,0 +1,124 @@
+﻿@model Bulky.Models.ViewModels.ShoppingCartVM
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Cairo:wght@300&display=swap" rel="stylesheet">
+<form method="post">
+    @if (Model.ListCart.Count() > 0)
+    {
+        <div class="shopping-cart">
+            <div class="shopping-cart__header">
+                <div class="shopping-cart-header__number">
+                    @Model.ListCart.Count() items in your cart
+                </div>
+                <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="shopping-cart-header__keep-shopping">
+                    Keep shopping
+                </a>
+            </div>
+            <div class="shopping-cart__main">
+                <div class="shopping-cart__item">
+                    <!-- <div style="height: 1rem"></div> -->
+                    <div class="shopping-cart__list-product">
+                        @foreach (var item in Model.ListCart)
+                        {
+                            <div class="shopping-cart__product">
+                                <div class="shopping-cart-product__item">
+                                    <div class="shopping-cart-product__img">
+                                        @if (item.Product.ImageUrl.Count > 0)
+                                        {
+                                            <img src="@item.Product.ImageUrl[0].ImageUrl" alt="">
+                                        }
+                                    </div>
+                                </div>
+                                <div class="shopping-cart-product__item">
+                                    <a asp-area="Customer" asp-controller="Home" asp-action="Details" asp-route-id="@item.Product.Id" class="shopping-cart-product__title">
+                                        @item.Product.Title
+                                    </a>
+                                    <div class="shopping-cart-product__desc">
+                                        @item.Product.Description
+                                    </div>
+                                    <div class="shopping-cart-product__remove">
+                                        <a asp-action="remove" asp-route-cartId="@item.Id">
+                                            <span>Remove</span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                                <div class="shopping-cart-product__item">
+                                    <div class="shopping-cart-product__number">
+                                        @item.Price x @item.Count
+                                    </div>
+                                </div>
+                                <div class="shopping-cart-product__item">
+                                    <div class="shopping-cart-product__icons">
+                                        <div class="shopping-cart-product-icon__plus-and-minus">
+                                            <div class="shopping-cart-product-icon__plus">
+                                                <a asp-action="plus" asp-route-cartId="@item.Id">
+                                                    <i class="fas fa-plus"></i>
+                                                </a>
+                                            </div>
+                                            <div class="shopping-cart-product-icon__minus">
+                                                <a asp-action="minus" asp-route-cartId="@item.Id">
+                                                    <i class="fas fa-minus"></i>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="shopping-cart-product-icon__remove">
+                                                <a asp-action="remove" asp-route-cartId="@item.Id" class="btn btn-outline-danger">
+                                                    <i class="fas fa-trash"></i>
+                                                </a>
+                                            </div> -->
+                                    </div>
+                                </div>
+                                <div class="shopping-cart-product__item">
+                                    <div class="shopping-cart-product__btn">
+                                        <b>US$@Math.Round((item.Price * item.Count), 2)</b>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    </div>
+                </div>
+                <div class="shopping-cart__item">
+                    <div class="shopping-cart__checkout">
+                        <div class="shopping-cart-checkout__header">
+                            How you'll pay
+                        </div>
+                        <div class="shopping-cart-checkout__list-icon">
+                            <img class="shopping-cart-checkout__master-card" src="~/images//content/mastercard-icon.svg" alt="">
+                            <img class="shopping-cart-checkout__visa" src="~/images/content/visa-icon.svg" alt="">
+                        </div>
+                        <div class="shopping-cart-checkout__total">
+
+                            @if (@Model.ListCart.Count() <= 1)
+                            {
+                                <div class="shopping-cart-checkout__total-items">
+                                    Total(@Model.ListCart.Count() item)
+                                </div>
+                            }
+                            @if (@Model.ListCart.Count() > 1)
+                            {
+                                <div class="shopping-cart-checkout__total-items">
+                                    Total(@Model.ListCart.Count() items)
+                                </div>
+                            }
+                            <div class="shopping-cart-checkout__total-price">
+                                US$@Math.Round(Model.OrderHeader.OrderTotal, 2)
+                            </div>
+                        </div>
+                        
+                            
+                        <a asp-area="Customer" asp-controller="Cart" asp-action="Summary" class="btn-add-to-checkout">
+                            <div class="btn-add-to-checkout__text">
+                                Proceed to checkout
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    }
+    else
+    {
+    <h5 class="text-center m-3 font-weight-normal">There are no items in the shopping cart :(</h5>
+    }
+</form>

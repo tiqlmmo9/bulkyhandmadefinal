@@ -1,0 +1,36 @@
+C:\Users\ich\source\repos\Bulky\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.deps.json
+C:\Users\ich\source\repos\Bulky\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\source\repos\Bulky\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfoInputs.cache
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfo.cs
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csproj.CoreCompileInputs.cache
+C:\Users\ich\source\repos\Bulky\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.deps.json
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfo.cs
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.deps.json
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfo.cs
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.deps.json
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.AssemblyInfo.cs
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.Models\obj\Debug\netcoreapp3.1\Bulky.Models.pdb

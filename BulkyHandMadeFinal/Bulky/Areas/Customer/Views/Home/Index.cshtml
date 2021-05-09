@@ -1,0 +1,235 @@
+﻿@model Bulky.Models.RequestFeatures.PagedList<Bulky.Models.Product>
+@*@model ReflectionIT.Mvc.Paging.PagingList<Bulky.Models.Product>*@
+@*<form asp-action="Index" method="get">
+        <p>
+            Title: <input type="text" name="searchTerm" />
+            <input type="submit" value="Filter" />
+        </p>
+    </form>*@
+
+@*<form asp-action="Index" method="get">
+        <div class="d-flex justify-content-end">
+                <span>Sort By: &nbsp;</span>
+                <select class="bulky-sort" name="orderPrice" id="saveValue">
+                    <option value="defaultOrderPrice">Best match</option>
+                    <option value="priceDesc">Price Descending</option>
+                    <option value="priceAsc">Price Ascending</option>
+                </select>
+            </div>
+
+
+    </form>*@
+@*<a asp-action="Index" asp-route-searchTerm="action">Action</a>*@
+@*<a asp-action="Index" asp-route-searchTerm="fiction">Fiction</a>*@
+<style>
+    .card-product__img {
+        height: 210px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .card-img {
+        position: absolute;
+        left: -1000%;
+        right: -1000%;
+        top: -1000%;
+        bottom: -1000%;
+        margin: auto;
+        min-height: 100%;
+        width: 100%;
+    }
+</style>
+@if (Model.Count() == 0)
+{
+    <h5 class="text-center m-3 font-weight-normal">There are no products there :(</h5>
+}
+else
+{
+    <span class="main__title">
+        Find things you'll love. Only on Bulky.
+    </span>
+    <div class="bulky-select">
+        <div class="bulky-select__main">
+            <div class="bulky-select__text">
+
+            </div>
+            <div class="bulky-select__icon">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+            <div class="bulky-select__box">
+                <div class="bulky-select-box__item">
+                    <a asp-action="Index" asp-route-orderPrice="defaultOrderPrice">Best Match</a>
+                </div>
+                <div class="bulky-select-box__item">
+                    <a asp-action="Index" asp-route-orderPrice="priceDesc">Price low to high</a>
+                </div>
+                <div class="bulky-select-box__item" value="priceAsc">
+                    <a asp-action="Index" asp-route-orderPrice="priceAsc">Price high to low</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bulky-line"></div>
+    <div class="bulky-product-list">
+        @foreach (var product in Model)
+        {
+            <a asp-action="Details" asp-route-id="@product.Id" class="bulky-product">
+                <div class="bulky-product__img">
+                    @if (product.ImageUrl.Count > 0)
+                    {
+                        <img src="@product.ImageUrl[0].ImageUrl" />
+                    }
+                </div>
+                <div>
+                    <div class="bulky-product__title">
+                        @product.Title
+                    </div>
+                    <div class="bulky-product__supplier">@product.Supplier.Name</div>
+                </div>
+                <div class="bulky-product__price-group">
+                    <div class="bulky-product__price">US$@product.Price100.ToString("0.00")</div>
+                    <div class="bulky-product__list-price">US$@product.ListPrice.ToString("0.00")</div>
+                </div>
+            </a>
+            <!--<div class="col-lg-3 col-md-6">
+            <div class="row p-2">
+                <div class="col-12  p-1">
+                    <a asp-action="Details" asp-route-id="@product.Id" class="card" style="border:0px; text-decoration: none">
+                        @if (product.ImageUrl.Count > 0)
+                        {
+                        <div class="card-product__img">
+                            <img src="@product.ImageUrl[0].ImageUrl" class="card-img" />
+                        </div>
+                        }
+
+                        <div>
+                            <p class="card-title h5 dots"><b style="color:#2c3e50;">@product.Title</b></p>
+                            <p class="card-title" style="font-size: 12px; color: #595959 "> @product.Supplier.Name</p>
+                        </div>
+                        <div class="d-flex">
+                            <div style="font-size:16px; color: black ">
+                                <p><b>US$@product.Price100.ToString("0.00")</b></p>
+                            </div>
+                            <div style="padding-left:5px; color:#258635;">
+                                <strike style="font-size:13px">US$@product.ListPrice.ToString("0.00")</strike>
+                            </div>
+
+                        </div>
+                    </a>-->
+
+            @*<div>
+                    <a asp-action="Details" class="btn btn-primary form-control" asp-route-id="@product.Id">Details</a>
+                </div>*@
+            <!--</div>
+                </div>
+            </div>-->
+
+        }
+
+    </div>
+}
+
+@*@{
+        var prevDisabled = !Model.MetaData.HasPrevious ? "disabled" : "";
+        var nextDisabled = !Model.MetaData.HasNext ? "disabled" : "";
+    }
+
+    <div class="text-center">
+        <a asp-action="Index"
+           asp-route-pageNumber="@(Model.MetaData.CurrentPage - 1)"
+           asp-route-searchTerm="@ViewData["SearchTerm"]"
+           asp-route-orderPrice="@ViewData["OrderPrice"]"
+           class="btn btn-default @prevDisabled">
+            Previous
+        </a>
+        <a asp-action="Index"
+           asp-route-pageNumber="@(Model.MetaData.CurrentPage + 1)"
+           asp-route-searchTerm="@ViewData["SearchTerm"]"
+           asp-route-orderPrice="@ViewData["OrderPrice"]"
+           class="btn btn-default @nextDisabled">
+            Next
+        </a>
+    </div>*@
+<div class="bulky-paging">
+    @for (var i = 1; i <= Model.MetaData.TotalPages; i++)
+    {
+        <a asp-action="Index" asp-route-searchTerm="@ViewData["SearchTerm"]"
+           asp-route-orderPrice="@ViewData["OrderPrice"]" asp-route-pageNumber="@i" class="bulky-paging__page @(i == Model.MetaData.CurrentPage ? "active-bulky-page" : "")">
+            @i
+        </a>
+    }
+</div>
+
+<script>
+    document.querySelector(".bulky-select").addEventListener("click", function () {
+        this.classList.toggle("bulky-select-open");
+    });
+
+
+    document
+        .querySelector(".bulky-select-box__item")
+        .classList.add("bulky-select-box-selected");
+    for (const chooseListOption of document.querySelectorAll(
+        ".bulky-select-box__item"
+    )) {
+        chooseListOption.addEventListener("click", function () {
+            if (!this.classList.contains("bulky-select-box-selected")) {
+                this.parentNode
+                    .querySelector(".bulky-select-box-selected")
+                    .classList.remove("bulky-select-box-selected");
+                this.classList.add("bulky-select-box-selected");
+
+                // console.log(this.closest(".bulky-select"));
+                this.closest(".bulky-select").querySelector(
+                    ".bulky-select__text"
+                ).textContent = this.textContent;
+                localStorage.setItem("saveOrderPrice", this.textContent);
+            }
+        });
+    }
+
+    window.addEventListener("click", function (e) {
+        if (!document.querySelector(".bulky-select").contains(e.target)) {
+            document
+                .querySelector(".bulky-select")
+                .classList.remove("bulky-select-open");
+        }
+    });
+
+
+    //console.log(document.documentURI)
+    var url = document.documentURI;
+    function OrderPrice() {
+        //console.log(url.includes("priceDesc"))
+        //if (url.includes("priceDesc")) {
+        //    document.querySelector(".bulky-select__text").textContent = "Price low to high";
+        //}
+        //if (url.includes("priceAsc")) {
+        //    document.querySelector(".bulky-select__text").textContent = "Price high to low";
+        //}
+        document.querySelector(".top-header__logo").addEventListener("click", function () {
+            localStorage.setItem("saveOrderPrice", null);
+        });
+
+        if (localStorage.getItem("saveOrderPrice") != null) {
+            document.querySelector(".bulky-select__text").textContent = localStorage.getItem("saveOrderPrice");
+            for (const option of document.querySelectorAll(
+                ".bulky-select-box__item")) {
+                if (option.textContent == document.querySelector(".bulky-select__text").textContent) {
+                    if (!option.classList.contains("bulky-select-box-selected")) {
+                        option.parentNode.querySelector(".bulky-select-box-selected").classList.remove("bulky-select-box-selected");
+                        option.classList.add("bulky-select-box-selected");
+                    }
+
+
+                }
+            }
+        }
+        document.querySelector(".bulky-select__text").textContent = document.querySelector(".bulky-select-box-selected").textContent;
+
+
+
+        console.log(localStorage.getItem("saveOrderPrice"))
+    }
+    OrderPrice();
+</script>

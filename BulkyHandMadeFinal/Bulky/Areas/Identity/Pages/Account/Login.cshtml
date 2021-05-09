@@ -1,0 +1,81 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Log in";
+}
+
+<div class="sign-in">
+    <form id="account" method="post">
+        <div class="sign-in__top">
+            <div class="sign-in__top--sign-in">
+                Sign in
+            </div>
+            <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="sign-in__top--register">
+                Register
+            </a>
+        </div>
+        <div class="sign-in__username">
+            <div class="sign-in__username--email">
+                <div class="sign-in__username--label">Email address</div>
+                <input asp-for="Input.Email" class="sign-in__username--input" type="email">
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="sign-in__username--password">
+                <div class="sign-in__username--label">Password</div>
+                <input asp-for="Input.Password" class="sign-in__username--input" type="password">
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="sign-in__bottom">
+            <div class="sign-in__bottom--stay-group">
+                <input asp-for="Input.RememberMe" class="sign-in__bottom--checkbox" type="checkbox">
+                <div class="sign-in__bottom--stay">
+                    Stay signed in
+                </div>
+            </div>
+
+            <a id="forgot-password" asp-page="./ForgotPassword" class="sign-in__bottom--forgot-password">
+                Forgot your password?
+            </a>
+        </div>
+        <button type="submit" class="sign-in__btn">
+            Sign in
+        </button>
+        <div asp-validation-summary="ModelOnly" class="text-danger signin-validate"></div>
+    </form>
+    <div class="sign-in__line">
+        <div class="sign-in__line--text">
+            <!-- OR -->
+        </div>
+    </div>
+    <form id="external-account" asp-page="./ExternalLogin" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <div class="sign-in-btn__social">
+            @foreach (var provider in Model.ExternalLogins)
+            {
+                @if (provider.Name.ToLower().Contains("google"))
+                {
+                    <button type="submit" class="sign-in__btn sign-in-btn__social" name="provider" value="@provider.Name">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                }
+            }
+            @foreach (var provider in Model.ExternalLogins)
+            {
+                @if (provider.Name.ToLower().Contains("facebook"))
+                {
+                    <button type="submit" class="sign-in__btn sign-in-btn__social" name="provider" value="@provider.Name">
+                        <i class="fab fa-facebook-square"></i>
+                        Continue with Facebook
+                    </button>
+                }
+            }
+        </div>
+    </form>
+
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

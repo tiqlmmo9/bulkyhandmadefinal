@@ -1,0 +1,187 @@
+﻿@model Bulky.Models.ShoppingCart
+<div class="container-product-detail">
+    <form action="" method="post">
+        <input hidden asp-for="ProductId" />
+        <!-- start product detail -->
+        <div class="product-detail">
+            <div class="product-detail__item">
+                <!-- <div class="product-detail__thumb">
+                            <img src="img/facemask2.jpg" alt="">
+                            <div class="product-detail-thumb__img">
+                                <img src="img/facemask2.jpg" alt="">
+                            </div>
+                        </div> -->
+                <!-- <div class="product-detail__thumb product-detail__thumb-after">
+                            <img src="img/regular-after.jpg" alt="">
+                        </div> -->
+            </div>
+            <div class="product-detail__item">
+                <div class="product-detail__regular">
+                    <div class="img-zoom-lens"></div>
+                    <div class="product-detail-regular__img">
+
+                        <img id="myimage" src="" alt="">
+                    </div>
+                    <div class="product-detail__swipe-btn product-detail__swipe-btn--left">
+                        <i class="fas fa-chevron-left"></i>
+                    </div>
+                    <div class="product-detail__swipe-btn product-detail__swipe-btn--right">
+                        <i class="fas fa-chevron-right"></i>
+                    </div>
+                </div>
+
+                <!-- <div class="product-detail__regular-before">
+                            <img id="myimage" src="img/regular-before.jpg" alt="">
+                        </div>
+                        <div class="product-detail__regular-after">
+                            <img id="myimage"src="img/regular-after.jpg" alt="">
+                        </div> -->
+            </div>
+            <!-- <div id="myresult" class="img-zoom-result"></div> -->
+            <div class="product-detail__item">
+                <div id="myresult" class="img-zoom-result"></div>
+                <div>
+                    <span>@Model.Product.Supplier.Name</span>
+                </div>
+                <div class="product-detail__title">
+                    <span>@Model.Product.Title</span>
+                </div>
+                <div class="product-detail__price">
+                    <div class="product-detail-price__off">US$@Model.Product.Price.ToString("0.00")</div>
+                    <del class="product-detail-price__not-off">US$@Model.Product.ListPrice.ToString("0.00")</del>
+                </div>
+                <div class="product-detail__quantity">
+                    <!-- <div class="product-detail__quantity__text">
+                                <div>Quantity</div>
+                            </div> -->
+                    <div class="product-detail__quantity__1-49">
+                        <div>1-49</div>
+                    </div>
+                    <div class="product-detail__quantity__50-99">
+                        <div>50-99</div>
+                    </div>
+                    <div class="product-detail__quantity__100">
+                        <div>100+</div>
+                    </div>
+                </div>
+                <div class="product-detail__price-list">
+                    <!-- <div class="product-detail-price__text">
+                                <div>Price</div>
+                            </div> -->
+                    <div class="product-detail-price__1-49">
+                        <div>US$@Model.Product.Price.ToString("0.00")</div>
+                    </div>
+                    <div class="product-detail-price__50-99">
+                        <div>US$@Model.Product.Price50.ToString("0.00")</div>
+                    </div>
+                    <div class="product-detail-price__100">
+                        <div>US$@Model.Product.Price100.ToString("0.00")</div>
+                    </div>
+                </div>
+                <div class="product-detail__qty">
+                    <div class="product-detail-qty__label">Quantity</div>
+                    <input class="product-detail-qty__count" asp-for="Count" />
+                </div>
+                <button type="submit" href="" class="btn-add-to-card">
+                    <div class="btn-add-to-card__text">
+                        Add to cart
+                    </div>
+                </button>
+                <div class="product-detail__desc">
+                    <div class="product-detail-desc__label">
+                        Description
+                    </div>
+                    <div class="product-detail-desc__text">
+                        <p class="text-secondary">@Html.Raw(Model.Product.Description)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script>
+    var productImages = @Json.Serialize(Model.Product.ImageUrl);
+    var objProductImages = JSON.parse(JSON.stringify(productImages))
+    
+    //console.log(Json.Serialize(Model.Product.ImageUrl[0].ImageUrl));
+    var imgProduct = [];
+    function GetImage() {
+        //debugger
+        if (objProductImages != null) {
+            for (var item in objProductImages)
+            {
+                imgProduct.push(objProductImages[item].imageUrl);
+            }
+        }
+    }
+    GetImage();
+    console.log(imgProduct);
+    //var imgProduct = [];
+    //productImages.forEach(function addProductImages(image) {
+    //    imgProduct.push(image);
+    //});
+    imgProduct.forEach(function insertProduct(prod) {
+        // debugger;
+        document.querySelector(".product-detail__item").innerHTML +=
+            '<div class="product-detail__thumb"><img src="' +
+            prod +
+            '" alt=""></div>';
+    });
+
+    document
+        .querySelector(".product-detail__thumb")
+        .classList.add("selected-product");
+    myimage.src = document.querySelector(".selected-product img").src;
+    for (const listImage of document.querySelectorAll(".product-detail__thumb")) {
+        listImage.addEventListener("click", function () {
+            if (!this.classList.contains("selected-product")) {
+                this.parentNode
+                    .querySelector(".selected-product")
+                    .classList.remove("selected-product");
+                this.classList.add("selected-product");
+
+                myimage.src = document.querySelector(".selected-product img").src;
+            }
+        });
+    }
+
+    imgProduct.forEach(function changeSlide(sli) {
+        // console.log(images = sli);
+        var index = 0;
+        // console.log(arr[index].imageProduct.length);
+        document
+            .querySelector(".product-detail__swipe-btn--left")
+            .addEventListener("click", function () {
+                // debugger;
+                if (index <= 0) index = imgProduct.length;
+                index--;
+                // console.log(i);
+                setThumb(index);
+                // return setImg();
+            });
+        document
+            .querySelector(".product-detail__swipe-btn--right")
+            .addEventListener("click", function () {
+                if (index >= imgProduct.length - 1) index = -1;
+                index++;
+                setThumb(index);
+                // return setImg();
+            });
+        // function setImg() {
+        //   return myimage.setAttribute("src", sli);
+        // }
+        function setThumb(index) {
+            document
+                .querySelector(".product-detail__item")
+                .querySelector(".selected-product")
+                .classList.remove("selected-product");
+            document
+                .querySelectorAll(".product-detail__thumb")
+            [index].classList.add("selected-product");
+            myimage.src = document.querySelector(".selected-product img").src;
+        }
+    });
+
+
+</script>

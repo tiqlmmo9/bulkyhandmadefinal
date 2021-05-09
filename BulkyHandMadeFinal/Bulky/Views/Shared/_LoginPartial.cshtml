@@ -1,0 +1,40 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@* <ul class="navbar-nav"> *@
+@if (SignInManager.IsSignedIn(User))
+{
+    @*<li class="nav-item">
+            <a class="nav-link text-white" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">@await Component.InvokeAsync("UserName") </a>
+        </li>
+        <li class="nav-item">
+            <form class="form-inline" asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+                <button type="submit" class="nav-link btn btn-link text-white">Logout</button>
+            </form>
+        </li>*@
+    <a asp-area="Identity" asp-page="/Account/Manage/Index" class="top-header__username">
+        <i class="fas fa-user"></i>
+        <span class="top-header__username-text">@await Component.InvokeAsync("UserName")</span>
+    </a>
+
+    <form asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })">
+        <button type="submit" class="top-header__log-in">Logout</button>
+    </form>
+    @*<a asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })" class="top-header__log-in">
+            Logout
+        </a>*@
+}
+else
+{
+    @*<li class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>*@
+
+    <a asp-area="Identity" asp-page="/Account/Login" class="top-header__log-in">
+        Sign in
+    </a>
+}
+@*</ul>*@

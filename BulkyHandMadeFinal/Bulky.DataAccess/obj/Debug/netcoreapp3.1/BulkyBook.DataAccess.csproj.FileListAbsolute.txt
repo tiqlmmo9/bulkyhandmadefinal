@@ -1,0 +1,68 @@
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.deps.json
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csprojAssemblyReference.cache
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.dll
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.pdb
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.json
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.dev.json
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\ich\source\repos\Bulky\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.deps.json
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.json
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.dev.json
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.pdb
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\Bulky MULTI\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.deps.json
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.json
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.dev.json
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\Bulky MULTI2\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.genruntimeconfig.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.deps.json
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.json
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.runtimeconfig.dev.json
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Models.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\bin\Debug\netcoreapp3.1\Bulky.Utility.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csprojAssemblyReference.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfoInputs.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.AssemblyInfo.cs
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.csproj.CopyComplete
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.dll
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.pdb
+C:\Users\ich\Desktop\BulkyHandMade\Bulky.DataAccess\obj\Debug\netcoreapp3.1\Bulky.DataAccess.genruntimeconfig.cache

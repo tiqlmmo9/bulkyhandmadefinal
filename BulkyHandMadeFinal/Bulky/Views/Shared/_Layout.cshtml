@@ -1,0 +1,179 @@
+﻿@using Bulky.Utility
+@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] Bulky</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Cairo:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="bulky-manager-header-group">
+        <div class="bulky-manager">
+            @if (User.IsInRole(SD.Role_Employee) || User.IsInRole(SD.Role_Admin))
+            {
+                <div class="content-manager">
+                    CONTENT MANAGEMENT
+                    <i class="fas fa-sort-down"></i>
+                    <div class="content-manager__dropdown-menu">
+                        <a class="content-manager__dropdown-item" href="/Admin/Category">Category</a>
+                        <a class="content-manager__dropdown-item" href="/Admin/Product">Product</a>
+                    </div>
+                </div>
+            }
+            @if (User.IsInRole(SD.Role_Employee) || User.IsInRole(SD.Role_Admin))
+            {
+                <div class="user-company-manager">
+                    COMPANY/SUPPLIER
+                    <i class="fas fa-sort-down"></i>
+                    <div class="content-manager__dropdown-menu">
+                        <a class="content-manager__dropdown-item" href="/Admin/Company">Company</a>
+                        @*<a class="content-manager__dropdown-item" href="/Admin/User">User</a>*@
+                        <a class="content-manager__dropdown-item" href="/Admin/Supplier">Supplier</a>
+                    </div>
+                </div>
+            }
+            @if (User.IsInRole(SD.Role_Admin))
+            {
+                <div class="order-manager">
+                    <a href="/Admin/User">MANAGE USER</a>
+                </div>
+            }
+            <div class="order-manager">
+                <a href="/Admin/Order">
+
+                    @if (User.IsInRole(SD.Role_Admin) || User.IsInRole(SD.Role_Employee))
+                    {
+                        <span>MANAGE ORDER</span>
+                    }
+                    else
+                    {
+                        <span>ORDER HISTORY</span>
+                    }
+                </a>
+            </div>
+        </div>
+        <div class="bulky-header">
+            <div class="top-header">
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="top-header__logo">
+                    <img src="~/images/content/bulky-logo.png" alt="">
+                </a>
+                <form asp-area="" asp-controller="Home" asp-action="Index" method="get">
+                    <div class="top-header__search">
+                        <input placeholder="Search for anything" class="top-header__search-input" name="searchTerm" />
+                        <button type="submit" class="top-header__search-btn">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="top-header__log-in-cart-history">
+                    <!-- <a href="" class="top-header__history">
+                        <i class="fas fa-history"></i>
+                    </a> -->
+                    @if (HttpContextAccessor.HttpContext.Session.GetInt32(SD.ssShoppingCart) != null)
+                    {
+                        <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="top-header__cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="top-header__cart-count">
+                                @{
+                                    var count = HttpContextAccessor.HttpContext.Session.GetInt32(SD.ssShoppingCart);
+                                }
+                                @count
+                            </div>
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-area="Customer" asp-controller="Cart" asp-action="Index" class="top-header__cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <div class="top-header__cart-count">
+                                @{
+                                    var count = HttpContextAccessor.HttpContext.Session.GetInt32(SD.ssShoppingCart);
+                                }
+                                0
+                            </div>
+                        </a>
+                    }
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+            <div class="bottom-header">
+                <a class="bottom-header__item" asp-area="" asp-controller="Home" asp-action="Index" asp-route-searchTerm="face masks">
+                    Face masks
+                    <span class="bottom-header-item__line"></span>
+                </a>
+                <a class="bottom-header__item" asp-area="" asp-controller="Home" asp-action="Index" asp-route-searchTerm="wall decor">
+                    Wall Decor
+                </a>
+                <a class="bottom-header__item" asp-area="" asp-controller="Home" asp-action="Index" asp-route-searchTerm="vases">
+                    Vases
+                </a>
+                <a class="bottom-header__item" asp-area="" asp-controller="Home" asp-action="Index" asp-route-searchTerm="hats">
+                    Hats
+                </a>
+                <a class="bottom-header__item" asp-area="" asp-controller="Home" asp-action="Index" asp-route-searchTerm="Clocks">
+                    Clocks
+                </a>
+            </div>
+        </div>
+    </header>
+    <div class="bulky-main">
+        @RenderBody()
+    </div>
+
+    <footer class="bulky-footer">
+        <div class="border-top footer text-muted text-white-50">
+            <div class="bulky-footer__main">
+                <div class="bulky-footer-main__lang-cur">
+                    <span>&nbsp; English (US) &nbsp; | &nbsp; $ (USD)</span>
+                </div>
+                <div class="bulky-footer-main__copy">
+                    <div class="bulky-footer-main__copy--inc">
+                        <span>© 2021 Etsy, Inc.</span>
+                    </div>
+                    <div class="bulky-footer-main__copy--term">
+                        <a href="">Terms of Use</a>
+                    </div>
+                    <div class="bulky-footer-main__copy--privacy">
+                        <a href="">Privacy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://kit.fontawesome.com/e19c476714.js"></script>
+    @RenderSection("Scripts", required: false)
+    <script>
+        document
+            .querySelector(".top-header__search-input")
+            .addEventListener("click", function () {
+                this.parentNode
+                    .querySelector(".top-header__search-btn")
+                    .classList.add("search-btn-color");
+            });
+        window.addEventListener("click", function (e) {
+            //thêm ở chỗ mô thì remove chỗ đó (đang thêm ở .custome-select)
+            if (!document.querySelector(".top-header__search-input").contains(e.target)) {
+                document
+                    .querySelector(".top-header__search-btn")
+                    .classList.remove("search-btn-color");
+            }
+        });
+    </script>
+</body>
+</html>
